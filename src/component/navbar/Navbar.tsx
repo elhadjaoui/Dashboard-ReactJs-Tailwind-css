@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useRecoilState } from 'recoil'
+import { ActiveTabState } from '../../atoms/ActiveTabState'
 import { navLinks } from './utils/NabDB'
 
 
@@ -17,7 +19,7 @@ type NavItemPorp =
 const Navbar = () => {
   return (
     <nav className=' col-span-2 border-r border-gray-200 min-h-[90vh]
-     w-[80px] xl:w-[250px] pt-8 px-1 flex flex-col items-start justify-between'>
+     w-[80px] lg:w-[250px] pt-8 px-1 flex flex-col items-start justify-between'>
       <div className='space-y-8 w-full'>
         {
           navLinks.slice(0, 4).map((link) => (
@@ -37,11 +39,17 @@ const Navbar = () => {
 
 
 function NavItem({ link }: NavItemPorp) {
+  const [activeNacItem, setActiveNavItem] = useRecoilState(ActiveTabState)
+  console.log(activeNacItem);
+  
   return (
-    <div key={link.id} className="w-full flex items-center justify-start space-x-8 px-5 cursor-pointer
-                group hover:border-gray-900 border-l-4 border-transparent">
+    <div onClick={()=>
+    {
+      setActiveNavItem(link.id)
+    }} key={link.id} className={`w-full flex items-center justify-start space-x-8 px-5 cursor-pointer
+                group hover:border-gray-900 border-l-4 border-transparent ${activeNacItem === link.id && "border-gray-900"}  `}>
       <span> {link.icon} </span>
-      <h1 className='text-gray-600 group-hover:text-black  lg:flex hidden'>{link.title} </h1>
+       <h1 className={`text-gray-600 group-hover:text-black  lg:flex hidden ${activeNacItem === link.id && "text-black"}`}>{link.title} </h1>
     </div>
   )
 }
