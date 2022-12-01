@@ -15,7 +15,6 @@ type NavItemPorp =
 
   }
 
-
 const Navbar = () => {
   return (
     <nav className=' col-span-2 border-r border-gray-200 min-h-[90vh]
