@@ -17,8 +17,8 @@ type NavItemPorp =
 
 const Navbar = () => {
   return (
-    <nav className=' col-span-2 border-r border-gray-200 min-h-[90vh]
-     w-[80px] lg:w-[250px] pt-8 px-1 flex flex-col items-start justify-between'>
+    <nav className='col-span-2 border-r border-gray-200 min-h-[100vh]
+     w-[80px] xl:w-[250px] pt-8 px-1 flex flex-col items-start justify-between'>
       <div className='space-y-8 w-full'>
         {
           navLinks.slice(0, 4).map((link) => (
@@ -31,6 +31,13 @@ const Navbar = () => {
             <NavItem link={link} />
           ))
         }
+      </div>
+      <div className='lg:flex hidden flex-col items-center justify-center p-4 space-y-4'>
+          <h1 className='text-xl w-full font-medium'> 
+            Grow Your <br /> Saving Now
+          </h1>
+          <p> Pick an investement strategy that reflects your goals</p>
+          <button className='w-full py-2 px-3 bg-black text-white'>Becom a Pro</button>
       </div>
     </nav>
   )

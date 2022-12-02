@@ -9,8 +9,7 @@ function App() {
       <Header />
       <div className='w-full min-h-[90vh] grid grid-cols-12'>
         <Navbar />
-
-        <div>
+        <div className='grid grid-cols-1 lg:grid-cols-5 w-full col-span-10'>
           {/** left part */}
           {/** right part */}
         </div>

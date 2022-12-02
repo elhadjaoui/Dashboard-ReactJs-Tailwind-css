@@ -1,0 +1,16 @@
+ECMAScript is a JavaScript standard intended to ensure the interoperability of web pages across different browsers It is standardized by Ecma International in the document ECMA-262.
+
+The align-self CSS property overrides a grid or flex item's align-items value.
+
+To center our box we use the align-items property to align our item on the cross axis, which in this case is the block axis running vertically. We use justify-content to align the item on the main axis, which in this case is the inline axis running horizontally.
+
+ -------------------------> main axis justify-content
+|
+|
+|
+|
+|
+|
+v
+cross axis
+align-items
