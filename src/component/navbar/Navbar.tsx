@@ -18,7 +18,7 @@ type NavItemPorp =
 const Navbar = () => {
   return (
     <nav className='col-span-2 border-r border-gray-200 min-h-[90vh]
-     w-full  pt-8 px-1 flex flex-col items-start justify-between'>
+     w-full pt-8 px-1 flex flex-col items-start justify-between'>
       <div className='space-y-8 w-full'>
         {
           navLinks.slice(0, 4).map((link) => (
