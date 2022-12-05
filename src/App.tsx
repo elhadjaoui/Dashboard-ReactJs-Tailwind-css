@@ -1,6 +1,8 @@
 import './App.css'
 import Header from './component/header/Header'
+import Leftpart from './component/leftPart/Leftpart'
 import Navbar from './component/navbar/Navbar'
+import Rightpart from './component/rightpart/Rightpart'
 
 function App() {
 
@@ -11,8 +13,10 @@ function App() {
         <Navbar />
         <div className='grid grid-cols-1 lg:grid-cols-5 w-full col-span-10'>
           {/** left part */}
+          <Leftpart/>
           {/** right part */}
-        </div>
+          <Rightpart/>
+        </div> 
       </div>
     </div>
   )
