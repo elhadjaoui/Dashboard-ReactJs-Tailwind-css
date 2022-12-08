@@ -16,4 +16,8 @@
     {
         @apply w-6 h-6 stroke-gray-600
     }
+    .widget-icon
+    {
+        @apply w-8 h-8 stroke-1
+    }
 }
