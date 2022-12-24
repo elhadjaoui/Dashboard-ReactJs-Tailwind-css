@@ -7,7 +7,7 @@ import Rightpart from './component/rightpart/Rightpart'
 function App() {
 
   return (
-    <div className='App '>
+    <div >
       <Header />
       <div className='w-full min-h-[90vh] grid grid-cols-12'>
         <Navbar />
